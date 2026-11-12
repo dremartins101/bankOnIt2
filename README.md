@@ -54,8 +54,35 @@ class User {
     + getReport(): (abstract) String
 }
 
+class Bank {
+-admin: Admin
+- customers: ArrayList
+
++ Bank()
++main():void
++loadSampleCustomers(): void
++loadCustomers(): void
++saveCustomers(): void
++fullCustomerReport(): void
++addUser(): void
++ applyInterest(): void
++ +loginAsCustomer(): void
++ +menu(): void
++ +start(): void
++ +startAdmin(): void
+}
+
+class Admin{
++Admin()
++menu(): String
++getReport(): String
+}
+
 SavingAccount --|> CheckingAccount : Extends
 CheckingAccount --|> HasMenu : Implements
 User --|> HasMenu : Implements
 Customer --|> User : Extends
+
+Customer --|> Bank
+Admin --|> Bank
 ```
