@@ -1,3 +1,8 @@
+Bank.class: Bank.java Admin.class Customer.class User.class CheckingAccount.class SavingsAccount.class HasMenu.class
+	javac -g Bank.java
+Admin.class: Admin.java User.class
+	javac -g Admin.java
+
 Customer.class: Customer.java User.class CheckingAccount.class SavingsAccount.class
 	javac -g Customer.java
 
@@ -21,6 +26,9 @@ testChecking: CheckingAccount.class
 
 testSavings: SavingsAccount.class
 	java SavingsAccount
+
+testBank: Bank.class
+	java Bank
 
 clean:
 	rm -f *.class

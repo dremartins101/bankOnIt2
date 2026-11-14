@@ -136,7 +136,7 @@ public class Bank implements HasMenu {
 		alice.getChecking().setBalance(1000);
 		alice.getSavings().setBalance(1000);
 
-		customer bob = new Customer("Bob, "2222");
+		Customer bob = new Customer("Bob", "2222");
 		Customer cindy = new Customer("Cindy", "3333");
 
 		customers.add(alice);
@@ -146,7 +146,7 @@ public class Bank implements HasMenu {
 	
 	public void saveCustomers(){
 		try{
-			ObjectOutputStream out = new ObjectOutputStream(new FileoutputStream("customers.dat"));
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("customers.dat"));
 
 			out.writeObject(customers);
 			out.close();
