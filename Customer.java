@@ -28,11 +28,6 @@ public class Customer extends User {
 	}
 
 	public void start() {
-		if (!login()){
-			System.out.println("Incorrect username or PIN.");
-			return;
-		}
-
 		String choice = "";
 
 		while (!choice.equals("0")){
@@ -59,6 +54,14 @@ public class Customer extends User {
 		System.out.print("Enter new PIN: ");
 		this.PIN = CheckingAccount.input.nextLine();
 		System.out.println("PIN updated successfully");
+	}
+
+	public SavingsAccount getSavings(){
+		return savings;
+	}
+
+	public CheckingAccount getChecking(){
+		return checking;
 	}
 
 	@Override

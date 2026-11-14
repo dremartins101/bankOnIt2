@@ -35,13 +35,11 @@ public abstract class User implements HasMenu, Serializable{
 	}
 
 	public boolean login() {
-    		Scanner input = new Scanner(System.in);
-
     		System.out.print("Username: ");
-    		String u = input.nextLine();
+    		String u = CheckingAccount.input.nextLine();
 
     		System.out.print("PIN: ");
-    		String p = input.nextLine();
+    		String p = CheckingAccount.input.nextLine();
 
     	return login(u, p);
 	}

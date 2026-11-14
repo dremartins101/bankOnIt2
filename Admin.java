@@ -1,8 +1,8 @@
 import java.util.*;
 import java.io.*;
 
-public abstract class Admin extends User{
-	public admin(){
+public class Admin extends User{
+	public Admin(){
 		super("admin", "0000");
 	}
 
